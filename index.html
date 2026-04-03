@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    <!-- Modern Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main class="page-container">
+        <!-- Background decorative elements -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+
+        <!-- Glassmorphism Form Container -->
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Student Enrollment</h1>
+                <p>Enter your details below to register in SCHOOL-DB.</p>
+                <div id="status-message" class="status-badge hidden">Status Label</div>
+            </div>
+
+            <form id="enrollmentForm" autocomplete="off">
+                <div class="form-grid">
+                    <!-- Primary Key Field -->
+                    <div class="input-group">
+                        <label for="rollNo">Roll No. <span class="required">*</span></label>
+                        <input type="text" id="rollNo" name="rollNo" class="form-control primary-key" placeholder="Enter Roll Number" tabindex="1">
+                        <small class="helper-text">This is the unique identifier.</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="fullName">Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullName" name="fullName" class="form-control" placeholder="John Doe" disabled tabindex="2">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="studentClass">Class <span class="required">*</span></label>
+                        <input type="text" id="studentClass" name="studentClass" class="form-control" placeholder="e.g., 10th Grade" disabled tabindex="3">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="birthDate">Birth Date <span class="required">*</span></label>
+                        <input type="date" id="birthDate" name="birthDate" class="form-control" disabled tabindex="4">
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label for="address">Address <span class="required">*</span></label>
+                        <input type="text" id="address" name="address" class="form-control" placeholder="123 Main Street, City" disabled tabindex="5">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="enrollmentDate">Enrollment Date <span class="required">*</span></label>
+                        <input type="date" id="enrollmentDate" name="enrollmentDate" class="form-control" disabled tabindex="6">
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button type="button" id="saveBtn" class="btn btn-primary" disabled tabindex="7">
+                        <span class="btn-text">Save</span>
+                        <div class="spinner hidden"></div>
+                    </button>
+                    <button type="button" id="updateBtn" class="btn btn-secondary" disabled tabindex="8">
+                        <span class="btn-text">Update</span>
+                        <div class="spinner hidden"></div>
+                    </button>
+                    <button type="button" id="resetBtn" class="btn btn-outline" disabled tabindex="9">
+                        Reset
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
